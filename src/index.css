@@ -1,0 +1,12 @@
+
+@font-face {
+    font-family: font-wzy;
+    src: url('./1.ttf');
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "font-wzy";
+    color: #51ffff;
+}
