@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
     entry: './src/index.js',
@@ -13,7 +12,6 @@ module.exports = {
         filename: '[name].bundle.js',
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             //title: 'webpack',
             template: './public/index.html',  //读取模板的入口文件
@@ -57,12 +55,23 @@ module.exports = {
             }, {
               loader: "less-loader" // compiles Less to CSS
             }]
+          },
+          {
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+               presets: ['@babel/preset-env']            
+              }
+            }
+          
           }
     
         ],
         
     },
-    mode: 'production'
+    mode: 'development'
 }
 
 
