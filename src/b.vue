@@ -12,7 +12,8 @@ export default {
     }
   }
 }
-var a = [1,2,3,4,5];
+import './b.js'
+var a = [1,2,3,4,5,6,7,8];
 a.map(item=>{
   console.log(item)
 })

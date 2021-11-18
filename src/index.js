@@ -16,6 +16,8 @@ import Icon from './1.png';
 import Vue from 'vue'
 import App from './App.vue'
 
+import './b.js'
+
 
 // 使用vue
 const root = document.createElement('div');
