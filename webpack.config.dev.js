@@ -75,6 +75,8 @@ module.exports = {
               ["@babel/plugin-transform-object-assign"],
               [
                 "@babel/plugin-transform-arrow-functions"
+              ],[
+                "@babel/plugin-transform-runtime"
               ]
 
             ]
